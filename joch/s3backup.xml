@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Name>S3Backup</Name>
+  <Description>
+    Automatically backup one or more folders to Amazon S3 [br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/data[/b] This is where you need to mount your volumes which you want backed up.[br][br]
+  </Description>
+  <Overview>
+    A simple way to backup important files to Amazon S3 and Glacier.
+  </Overview>
+  <Support>-</Support>
+  <Registry>https://registry.hub.docker.com/u/joch/docker-s3backup/</Registry>
+  <GitHub>https://github.com/joch/docker-s3backup</GitHub>
+  <Repository>joch/s3backup</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>none</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ACCESS_KEY</Name>
+      <Value>Your AWS Access key</Value>
+    </Variable>
+    <Variable>
+      <Name>SECRET_KEY</Name>
+      <Value>Your AWS Access secret</Value>
+    </Variable>
+    <Variable>
+      <Name>S3PATH</Name>
+      <Value>Your S3 bucket path, eg s3://mybucket/</Value>
+    </Variable>
+    <Variable>
+      <Name>CRON_SCHEDULE</Name>
+      <Value>Optionally change the backup schedule from hourly. CRON notation, default: 0 * * * *</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data/default</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Banner></Banner>
+  <Icon>http://i.imgur.com/NqyrUIy.png</Icon>
+  <Beta>False</Beta>
+  <Category>Backup: Cloud:</Category>
+  <Changes>
+    [center][font size=5]S3Backup Change Log[/font][/center]
+
+    [font size=4]2015-10-18[/font]
+    - Initial release
+  </Changes>
+  <Date>2015-10-18</Date>
+</Containers>
