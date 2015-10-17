@@ -2,12 +2,16 @@
 <Containers>
   <Name>S3Backup</Name>
   <Description>
-    Automatically backup one or more folders to Amazon S3 [br][br]
+    Automatically backup one or more folders to Amazon S3[br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/data[/b] This is where you need to mount your volumes which you want backed up.[br][br]
     Volumes can be mounted read-only, and you can mount multiple volumes below, for example:[br]
     - Container volume: /data/documents, Host path: /mnt/user/documents[br]
     - Container volume: /data/photos, Host path: /mnt/user/media/photos[br][br]
+    You span style='color: #E80000;']must[/span] set the correct envionment variables for the container. Click on "Advanced view" in the top right and fill in the filelds[br]
+    - ACCESS_KEY - your AWS access key[br]
+    - SECRET_KEY - your AWS secret key[br]
+    - S3PATH - your S3 bucket and path, eg. s3://mybucket/[br][br]
   </Description>
   <Overview>
     A simple way to backup important files to Amazon S3 and Glacier.
@@ -32,11 +36,11 @@
     </Variable>
     <Variable>
       <Name>S3PATH</Name>
-      <Value>Your S3 bucket path, eg s3://mybucket/</Value>
+      <Value>s3://mybucket/</Value>
     </Variable>
     <Variable>
       <Name>CRON_SCHEDULE</Name>
-      <Value>Optionally change the backup schedule from hourly. CRON notation, default: 0 * * * *</Value>
+      <Value>0 * * * *</Value>
     </Variable>
   </Environment>
   <Data>
