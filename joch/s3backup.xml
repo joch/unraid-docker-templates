@@ -6,8 +6,8 @@
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/data[/b] This is where you need to mount your volumes which you want backed up.[br][br]
     Volumes can be mounted read-only, and you can mount multiple volumes below, for example:[br]
-    - Container volume: /data/documents, Host path: /mnt/user/documents
-    - Container volume: /data/photos, Host path: /mnt/user/media/photos
+    - Container volume: /data/documents, Host path: /mnt/user/documents[br]
+    - Container volume: /data/photos, Host path: /mnt/user/media/photos[br][br]
   </Description>
   <Overview>
     A simple way to backup important files to Amazon S3 and Glacier.
