@@ -23,7 +23,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
-    <Mode>none</Mode>
+    <Mode>bridge</Mode>
   </Networking>
   <Environment>
     <Variable>
