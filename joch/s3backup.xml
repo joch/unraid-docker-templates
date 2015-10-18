@@ -16,7 +16,7 @@
   <Overview>
     A simple way to backup important files to Amazon S3 and Glacier.
   </Overview>
-  <Support></Support>
+  <Support>http://lime-technology.com/forum/index.php?topic=43481.0</Support>
   <Registry>https://registry.hub.docker.com/u/joch/s3backup/</Registry>
   <GitHub>https://github.com/joch/docker-s3backup</GitHub>
   <Repository>joch/s3backup</Repository>
