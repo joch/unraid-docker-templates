@@ -11,7 +11,10 @@
     You [span style='color: #E80000;']must[/span] set the correct envionment variables for the container. Click on "Advanced view" in the top right and fill in the filelds[br]
     - ACCESS_KEY - your AWS access key[br]
     - SECRET_KEY - your AWS secret key[br]
-    - S3PATH - your S3 bucket and path, eg. s3://mybucket/[br][br]
+    - S3PATH - your S3 bucket and path, eg. s3://mybucket/[br]
+    - S3CMDPARAMS - Custom parameters to the s3cmd command (set --reduced-redundancy for cheaper storage)[br]
+    - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 0 0 0" for once every night[br][br]
+    You can create a lifecycle policy within the S3 bucket which automatically archives the files to Glacier, which is a lot cheaper than S3 for long-term backups.[br][br]
   </Description>
   <Overview>
     A simple way to backup important files to Amazon S3 and Glacier.
