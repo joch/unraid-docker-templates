@@ -39,6 +39,10 @@
       <Value>s3://mybucket/</Value>
     </Variable>
     <Variable>
+      <Name>S3CMDPARAMS</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
       <Name>CRON_SCHEDULE</Name>
       <Value>0 * * * *</Value>
     </Variable>
