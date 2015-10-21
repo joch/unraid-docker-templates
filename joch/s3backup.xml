@@ -55,9 +55,10 @@
   <Category>Backup: Cloud:</Category>
   <Changes>
     [center][font size=5]S3Backup Change Log[/font][/center]
-
+    [font size=4]2015-10-21[/font]
+    - Expose env S3CMDPARAMS for setting custom s3cmd parameters
     [font size=4]2015-10-18[/font]
     - Initial release
   </Changes>
-  <Date>2015-10-18</Date>
+  <Date>2015-10-21</Date>
 </Containers>
