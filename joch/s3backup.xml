@@ -12,7 +12,7 @@
     - ACCESS_KEY - your AWS access key[br]
     - SECRET_KEY - your AWS secret key[br]
     - S3PATH - your S3 bucket and path, eg. s3://mybucket/[br]
-    - S3CMDPARAMS - Custom parameters to the s3cmd command (set --reduced-redundancy for cheaper storage)[br]
+    - S3CMDPARAMS - Custom parameters to the s3cmd command (set --reduced-redundancy for cheaper storage, --no-check-md5 for faster syncs)[br]
     - CRON_SCHEDULE - Customize how often the backup is executed (default: hourly), "0 3 0 0 0" for once every night[br][br]
     You can create a lifecycle policy within the S3 bucket which automatically archives the files to Glacier, which is a lot cheaper than S3 for long-term backups.[br][br]
   </Description>
@@ -58,10 +58,12 @@
   <Category>Backup: Cloud:</Category>
   <Changes>
     [center][font size=5]S3Backup Change Log[/font][/center]
+    [font size=4]2015-10-22[/font]
+    - Fix issue when using multiple parameters for S3CMDPARAMS
     [font size=4]2015-10-21[/font]
     - Expose env S3CMDPARAMS for setting custom s3cmd parameters
     [font size=4]2015-10-18[/font]
     - Initial release
   </Changes>
-  <Date>2015-10-21</Date>
+  <Date>2015-10-22</Date>
 </Containers>
